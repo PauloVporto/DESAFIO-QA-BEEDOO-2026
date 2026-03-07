@@ -22,8 +22,28 @@ Cypress.Commands.add('criarCursoViaUI', (curso) => {
 Cypress.Commands.add('verificarCursosListagem', () => {
     cy.visit('/');
     return cy.get('body').then(($body) => {
-        // Verifica se existe algum elemento que pareça um curso
         const temCurso = $body.find('.curso, .card, .q-card, .list-item').length > 0;
         return temCurso;
+    });
+});
+
+// COMANDO PARA TIRAR PRINT COM NOME PERSONALIZADO
+Cypress.Commands.add('tirarPrint', (nome) => {
+    cy.screenshot(`evidencia-${nome}`, {
+        capture: 'viewport',
+        overwrite: true
+    });
+    cy.log(`📸 Print tirado: evidencia-${nome}.png`);
+});
+
+// COMANDO PARA TIRAR PRINT APÓS CADA TESTE
+Cypress.Commands.add('tirarPrintPosTeste', () => {
+    const testName = Cypress.currentTest.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '-');
+    
+    cy.screenshot(`final-${testName}`, {
+        capture: 'fullPage',
+        overwrite: true
     });
 });
