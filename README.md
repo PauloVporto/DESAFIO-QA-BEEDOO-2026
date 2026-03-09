@@ -105,7 +105,7 @@ Page Object Pattern — Organização e reutilização de código
 
 4.2 Estrutura do Projeto
 
-DESAFIO-QA-BEEDOO-2026
+**DESAFIO-QA-BEEDOO-2026
 │
 ├── cypress
 │   ├── e2e
@@ -123,7 +123,7 @@ DESAFIO-QA-BEEDOO-2026
 │
 ├── cypress.config.js
 ├── package.json
-└── README.md
+└── README.md**
 
 ▶️ 4.3 Como Executar os Testes
 Pré-requisitos
