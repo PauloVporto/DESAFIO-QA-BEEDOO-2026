@@ -184,9 +184,6 @@ Melhorias Sugeridas	1
 👨‍💻 8. Autor
 Paulo - QA Analyst
 
-https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white(https://www.linkedin.com/in/paulo-vicente-porto-414201170/)
-
-
 📝 9. Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
