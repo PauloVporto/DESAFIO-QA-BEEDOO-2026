@@ -1,240 +1,198 @@
-
-# Desafio QA Beedoo 2026 - Automação de Testes
+# 🚀 Desafio QA Beedoo 2026 - Automação de Testes
 
 [![Cypress](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 [![JavaScript](https://img.shields.io/badge/language-JavaScript-F7DF1E.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## 📋 Sobre o Projeto
 
-Este repositório contém a solução para o Desafio Técnico de QA da Beedoo.
-O projeto consiste na análise da aplicação, criação de cenários de teste e automação de testes para o módulo de cadastro e listagem de cursos.
+Este repositório contém a solução completa para o desafio técnico de QA da Beedoo. O projeto consiste na análise, documentação e automação de testes para o módulo de **cadastro e listagem de cursos** da aplicação disponibilizada.
 
-Aplicação em teste:
-https://creative-sherbet-a51eac.netlify.app/
+**Aplicação em teste:** [Beedoo QA Tests](https://creative-sherbet-a51eac.netlify.app/)
 
-📊 2. Análise da Aplicação
-2.1 Objetivo da Aplicação
+---
 
-A aplicação foi desenvolvida para simular um sistema simples de cadastro e listagem de cursos.
+## 📊 1. Análise da Aplicação
 
-Seu objetivo é permitir que usuários:
+### 1.1. Objetivo da Aplicação
+A aplicação "Beedoo QA Tests" é um ambiente de demonstração desenvolvido para processos seletivos de QA. Seu objetivo é simular um sistema simples de cadastro e listagem de cursos, permitindo que candidatos demonstrem habilidades de:
+- Análise de sistemas
+- Criação de cenários de teste
+- Automação de testes
+- Documentação de bugs e melhorias
 
-Cadastrem novos cursos
+### 1.2. Principais Fluxos Disponíveis
+| Fluxo | Descrição |
+|-------|-----------|
+| **📋 Listagem de Cursos** | Página inicial que exibe todos os cursos cadastrados |
+| **➕ Cadastro de Cursos** | Formulário para criação de novos cursos com validações |
+| **🔄 Navegação** | Botões para alternar entre listagem e cadastro |
 
-Visualizem cursos cadastrados
+### 1.3. Pontos Críticos para Teste
+| Prioridade | Ponto Crítico | Motivo |
+|------------|---------------|--------|
+| 🔴 **Alta** | Campos obrigatórios | Impedem cadastro incompleto |
+| 🟡 **Média** | Validação de datas | Evita inconsistências |
+| 🟡 **Média** | Campo de vagas | Aceita apenas números |
+| 🟢 **Baixa** | Responsividade | Experiência em diferentes dispositivos |
 
-Naveguem entre páginas da aplicação
+---
 
-O sistema também serve como ambiente de prática para avaliação de habilidades de QA, incluindo análise de requisitos, criação de cenários de teste e automação.
+## 📋 2. Casos de Teste
 
-2.2 Principais Fluxos Disponíveis
-1. Fluxo de Listagem
+Os cenários e casos de teste estão documentados em uma planilha do Google Sheets, abrangendo **29 casos de teste** distribuídos em:
 
-A página inicial (/) exibe a lista de cursos cadastrados.
-Quando não existem cursos cadastrados, a lista aparece vazia.
+| Módulo | Testes Positivos | Testes Negativos | Total |
+|--------|------------------|------------------|-------|
+| **Cadastro** | 3 | 10 | 13 |
+| **Listagem** | 9 | 4 | 13 |
+| **Navegação** | 3 | 0 | 3 |
+| **TOTAL** | **15** | **14** | **29** |
 
-2. Fluxo de Cadastro
+🔗 **[Link para a Planilha de Casos de Teste](https://drive.google.com/drive/folders/1PexGLeASUMzO_Uxud4WBZpG1inO_llU2?usp=sharing)**
 
-Através do botão "Cadastrar curso", o usuário é direcionado para a página de cadastro (/new-course), onde deve preencher um formulário com os dados do curso.
+---
 
-3. Fluxo de Navegação
+## 🛠️ 3. Automação de Testes
 
-A aplicação permite navegar entre as páginas de listagem e cadastro através dos botões disponíveis no cabeçalho.
+### 3.1. Tecnologias Utilizadas
+| Tecnologia | Versão | Finalidade |
+|------------|--------|------------|
+| **Cypress** | ^13.0.0 | Framework de testes E2E |
+| **Mochawesome** | ^7.1.3 | Gerador de relatórios |
+| **JavaScript** | ES6 | Linguagem de programação |
 
-2.3 Pontos Críticos para Teste
-
-Os principais pontos que merecem maior atenção durante os testes são:
-
-Cadastro de Cursos
-
-Validação de campos obrigatórios
-
-Formatos de data
-
-Campos numéricos (quantidade de vagas)
-
-Campo de seleção de tipo de curso
-
-Persistência de Dados
-
-Garantir que os cursos cadastrados permaneçam disponíveis após atualização da página.
-
-A aplicação utiliza localStorage para armazenamento dos dados.
-
-Navegação
-
-Verificar se os links entre páginas funcionam corretamente.
-
-Responsividade
-
-Avaliar o comportamento da interface em diferentes resoluções (mobile, tablet e desktop).
-
-📋 3. Casos de Teste
-
-Os cenários e casos de teste foram documentados em uma planilha do Google Sheets, contemplando:
-
-Fluxos positivos
-
-Cenários negativos
-
-Validações de campos
-
-Testes de navegação
-
-Comportamentos inesperados
-
-🔗 Planilha de Casos de Teste, videos e report
-
-   [LINK](https://drive.google.com/drive/folders/1PexGLeASUMzO_Uxud4WBZpG1inO_llU2?usp=sharing)
-
-
-(Certifique-se de que a planilha esteja com permissão de visualização pública.)
-
-⚙️ 4. Automação dos Testes
-
-Os testes automatizados foram desenvolvidos utilizando Cypress, seguindo boas práticas de organização com Page Objects.
-
-4.1 Tecnologias Utilizadas
-
-Cypress — Framework de automação de testes E2E
-
-JavaScript
-
-Mochawesome — Gerador de relatórios HTML
-
-Page Object Pattern — Organização e reutilização de código
-
-4.2 Estrutura do Projeto
-
-**DESAFIO-QA-BEEDOO-2026
+### 3.2. Estrutura do Projeto
+DESAFIO-QA-BEEDOO-2026/
+├── 📁 cypress/
+│ ├── 📁 e2e/ # Arquivos de teste
+│ │ ├── cadastro-curso.cy.js # Testes de cadastro (14 testes)
+│ │ ├── listagem-cursos.cy.js # Testes de listagem (13 testes)
+│ │ └── descobrir-rota.cy.js # Testes de descoberta (14 testes)
+│ │
+│ ├── 📁 support/
+│ │ ├── 📁 pages/ # Page Objects
+│ │ │ ├── cadastroPage.js # Métodos da página de cadastro
+│ │ │ └── homePage.js # Métodos da página inicial
+│ │ ├── commands.js # Comandos customizados
+│ │ └── e2e.js # Configurações globais
+│ │
+│ ├── 📁 reports/ # Relatórios gerados
+│ │ ├── merged-report.json # Relatório mesclado
+│ │ └── 📁 html/ # Relatório HTML
+│ │ └── index.html
+│ │
+│ ├── 📁 screenshots/ # Prints de execução
+│ └── 📁 videos/ # Gravações dos testes
 │
-├── cypress
-│   ├── e2e
-│   │   ├── cadastro-curso.cy.js
-│   │   ├── listagem-cursos.cy.js
-│   │
-│   ├── support
-│   │   ├── pages
-│   │   │   ├── cadastroPage.js
-│   │   │   └── homePage.js
-│   │   │
-│   │   └── commands.js
-│   │
-│   └── reports
-│
-├── cypress.config.js
-├── package.json
-└── README.md**
+├── 📄 cypress.config.js # Configuração do Cypress
+├── 📄 package.json # Dependências e scripts
+└── 📄 README.md # Documentação
 
-▶️ 4.3 Como Executar os Testes
-Pré-requisitos
+text
 
-Node.js instalado
+### 3.3. Resultado da Execução
+**Todos os 42 testes automatizados passaram com sucesso!**
 
-npm instalado
+| Arquivo | Testes | Status |
+|---------|--------|--------|
+| `cadastro-curso.cy.js` | 14 | ✅ 100% |
+| `descobrir-rota.cy.js` | 14 | ✅ 100% |
+| `listagem-cursos.cy.js` | 13 | ✅ 100% |
+| `ncontrar-rota.cy.js` | 1 | ✅ 100% |
+| **TOTAL** | **42** | **✅ 100% APROVAÇÃO** |
 
-1. Clonar o repositório
+---
+
+## 🚀 4. Como Executar
+
+### 4.1. Pré-requisitos
+- **Node.js** (v18 ou superior)
+- **NPM** (v8 ou superior)
+- **Git**
+
+### 4.2. Instalação
+```bash
+# Clone o repositório
 git clone https://github.com/seu-usuario/DESAFIO-QA-BEEDOO-2026.git
-2. Acessar a pasta do projeto
+
+# Entre na pasta
 cd DESAFIO-QA-BEEDOO-2026
-3. Instalar dependências
+
+# Instale as dependências
 npm install
-4. Executar testes no terminal
-npm run cy:run
-5. Executar testes com geração de relatório
-npm run report
+4.3. Executando os Testes
+Comando	Descrição
+npm run cy:open	Abre o Cypress Runner (modo interativo)
+npm run cy:run	Executa todos os testes em modo headless
+npm run report:windows	Executa testes e gera relatório HTML
+4.4. Gerando Relatórios
+bash
+# Gerar relatório completo com gráficos
+npm run report:windows
 
-Esse comando:
+# O relatório estará em:
+# cypress/reports/html/index.html
+📸 5. Evidências de Execução
+As evidências (prints e vídeos) estão disponíveis no Google Drive:
 
-limpa relatórios antigos
+🔗 Link para a Pasta de Evidências
 
-executa todos os testes
+Estrutura das Evidências
+📁 prints/ - Screenshots de cada teste
 
-gera relatório HTML com resultados
+📁 videos/ - Gravações da execução
 
-6. Executar Cypress no modo interativo
-npm run cy:open
-📊 4.4 Resultado da Execução
+📁 relatorios/ - Relatórios HTML completos
 
-Todos os testes automatizados foram executados com sucesso.
+🐞 6. Registro de Bugs e Melhorias
+Durante a execução dos testes, foram identificados os seguintes pontos de melhoria:
 
-Resultados
+ID	Título	Severidade	Tipo	Status
+BUG-001	Ausência de mensagem de sucesso após cadastro	⚠️ Baixa	Usabilidade	Aberto
+BUG-002	Erro de digitação no título "Chalenge"	🟢 Muito Baixa	Cosmético	Aberto
+IMPL-003	Validação de datas sem mensagem explicativa	🟡 Média	Melhoria	Sugestão
+Detalhamento dos Bugs
+🐞 BUG-001: Ausência de mensagem de sucesso
+Passos: Cadastrar um curso → Clicar em "Cadastrar"
 
-Total de testes: 42
+Atual: Nenhuma mensagem é exibida
 
-Testes aprovados: 42
+Esperado: Toast "Curso cadastrado com sucesso!"
 
-Testes com falha: 0
+🐞 BUG-002: Erro de digitação
+Local: Cabeçalho da aplicação
 
-Status final:
+Atual: "Beedoo QA Chalenge"
 
-✅ 100% de aprovação
+Esperado: "Beedoo QA Challenge"
 
-📁 5. Evidências de Execução
+💡 IMPL-003: Melhoria na validação de datas
+Cenário: Data início > Data fim
 
-As evidências da execução dos testes foram armazenadas em uma pasta compartilhada contendo:
+Atual: Apenas bordas vermelhas
 
-Screenshots
+Sugestão: Exibir mensagem "Data fim deve ser posterior à data início"
 
-Vídeos da execução
+📊 7. Resumo dos Resultados
+Métrica	Resultado
+Total de Testes Automatizados	42
+Testes com Sucesso	42
+Taxa de Aprovação	100%
+Bugs Encontrados	2 (baixa prioridade)
+Melhorias Sugeridas	1
+👨‍💻 8. Autor
+Paulo Vicente - QA Analyst
 
-Resultados dos testes
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paulo-vicente-porto-414201170/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PauloVporto)
 
-🔗 Link para evidências
+📝 9. Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-https://drive.google.com/COLE_AQUI_SEU_LINK
+🙏 10. Agradecimentos
+Beedoo pela oportunidade de realizar este desafio
 
-📊 5.1 Relatório de Testes
+Comunidade Cypress pela excelente documentação
 
-Após executar os testes, o relatório HTML pode ser acessado em:
-
-cypress/reports/html/index.html
-
-O relatório contém:
-
-Status de cada teste
-
-Tempo de execução
-
-Screenshots
-
-Logs da execução
-6. ## 🐞 Registro de Bugs e Melhorias
-
-Durante a execução dos 42 testes automatizados, todos passaram com sucesso, mas foram identificados alguns pontos de melhoria na aplicação:
-
-### BUG-001: Ausência de mensagem de sucesso após cadastro
-- **Severidade:** Baixa
-- **Descrição:** Após cadastrar um curso com sucesso, o usuário é redirecionado para a listagem sem qualquer feedback visual confirmando a ação.
-- **Sugestão:** Adicionar uma notificação toast com a mensagem "Curso cadastrado com sucesso!".
-
-### BUG-002: Erro de digitação no título
-- **Severidade:** Muito Baixa
-- **Descrição:** O cabeçalho da aplicação exibe "Beedoo QA Chalenge" em vez de "Beedoo QA Challenge".
-- **Sugestão:** Corrigir a ortografia da palavra "Challenge".
-
-### IMPL-003: Validação de datas sem mensagem explicativa
-- **Severidade:** Média
-- **Descrição:** Quando o usuário tenta cadastrar com data de início maior que a data de fim, os campos são destacados em vermelho, mas nenhuma mensagem de erro explica o problema.
-- **Sugestão:** Adicionar uma mensagem de erro específica: "A data de fim deve ser posterior à data de início".
-
-### Status dos Testes
-- ✅ **42 testes executados**
-- ✅ **100% de aprovação**
-- 🐞 **2 bugs registrados** (baixa prioridade)
-- 💡 **1 sugestão de melhoria**
-
-🏁 7. Conclusão
-
-A aplicação foi analisada, cenários de teste foram definidos e 42 testes automatizados foram implementados utilizando Cypress.
-
-Durante o desafio foi possível:
-
-Analisar o comportamento da aplicação
-
-Criar cenários de teste positivos e negativos
-
-Automatizar fluxos críticos
-
-Gerar relatórios detalhados de execução
-
-Toda a documentação, automação e evidências estão disponíveis neste repositório.
+Todos os 42 testes que passaram! 🎉
