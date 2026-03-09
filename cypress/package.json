@@ -7,11 +7,13 @@
     "test": "cypress run",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "clean:reports": "rm -rf cypress/reports/* || del /f /q cypress\\reports\\*.* || true",
+    "clean:reports": "if exist cypress\\reports rmdir /s /q cypress\\reports",
     "merge:reports": "mochawesome-merge cypress/reports/*.json > cypress/reports/relatorio-merged.json",
     "generate:html": "marge cypress/reports/relatorio-merged.json -o cypress/reports/html --reportTitle 'Relatório de Testes - Beedoo QA' --reportPageTitle 'Desafio QA Beedoo' --charts --embeddedScreenshots --inline",
     "report:complete": "npm run clean:reports && npm run cy:run && npm run merge:reports && npm run generate:html",
-    "report:windows": "if exist cypress\\reports rmdir /s /q cypress\\reports && mkdir cypress\\reports && npm run cy:run && npm run merge:reports && npm run generate:html"
+    "report:windows": "if exist cypress\\reports rmdir /s /q cypress\\reports && mkdir cypress\\reports && npm run cy:run && npm run merge:reports && npm run generate:html",
+    "report:cadastro": "npm run clean:reports && cypress run --spec \"cypress/e2e/cadastro-curso.cy.js\" && npm run merge:reports && npm run generate:html",
+    "report:listagem": "npm run clean:reports && cypress run --spec \"cypress/e2e/listagem-cursos.cy.js\" && npm run merge:reports && npm run generate:html"
   },
   "keywords": ["cypress", "testing", "qa"],
   "author": "",

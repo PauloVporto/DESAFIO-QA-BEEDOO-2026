@@ -1,0 +1,478 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 13,
+    "passes": 13,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-09T12:53:17.676Z",
+    "end": "2026-03-09T12:53:55.514Z",
+    "duration": 37838,
+    "testsRegistered": 13,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e7806ee0-cc68-4a81-b20b-a7d1a47018b7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\listagem-cursos.cy.js",
+      "file": "cypress\\e2e\\listagem-cursos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f30fc6a5-1457-4b6f-bd14-52869826afdf",
+          "title": "🎯 Testes da Página de Listagem de Cursos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "d582cde6-175a-47bf-a951-f50e94400ab0",
+              "title": "✅ CTs POSITIVOS - Estrutura da Página",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "CT101 - Deve exibir o título \"Lista de cursos\" na página inicial",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos ✅ CTs POSITIVOS - Estrutura da Página CT101 - Deve exibir o título \"Lista de cursos\" na página inicial",
+                  "timedOut": null,
+                  "duration": 2614,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('h4', 'Lista de cursos').should('be.visible');\ncy.log('✅ Título da listagem verificado');",
+                  "err": {},
+                  "uuid": "b79b2399-462e-4d0e-8c5e-a49e38604aa0",
+                  "parentUUID": "d582cde6-175a-47bf-a951-f50e94400ab0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "CT102 - Deve exibir os botões de navegação corretamente",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos ✅ CTs POSITIVOS - Estrutura da Página CT102 - Deve exibir os botões de navegação corretamente",
+                  "timedOut": null,
+                  "duration": 1877,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('a', 'Listar cursos').should('be.visible');\ncy.contains('a', 'Cadastrar curso').should('be.visible');\ncy.log('✅ Botões de navegação verificados');",
+                  "err": {},
+                  "uuid": "3de5d3de-f224-4789-88ed-b2269fe19728",
+                  "parentUUID": "d582cde6-175a-47bf-a951-f50e94400ab0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "CT103 - Deve navegar para página de cadastro ao clicar em \"Cadastrar curso\"",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos ✅ CTs POSITIVOS - Estrutura da Página CT103 - Deve navegar para página de cadastro ao clicar em \"Cadastrar curso\"",
+                  "timedOut": null,
+                  "duration": 3426,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('a', 'Cadastrar curso').click();\ncy.url().should('include', '/new-course');\ncy.get('input[aria-label=\"Nome do curso\"]', {\n  timeout: 10000\n}).should('be.visible');\ncy.log('✅ Navegação para cadastro funcionando');",
+                  "err": {},
+                  "uuid": "464a3eb1-3ae5-480d-b1c4-d49f12c088ff",
+                  "parentUUID": "d582cde6-175a-47bf-a951-f50e94400ab0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "CT104 - Deve permanecer na listagem ao clicar em \"Listar cursos\"",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos ✅ CTs POSITIVOS - Estrutura da Página CT104 - Deve permanecer na listagem ao clicar em \"Listar cursos\"",
+                  "timedOut": null,
+                  "duration": 1305,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('a', 'Listar cursos').click();\ncy.url().should('eq', Cypress.config().baseUrl + '/');\ncy.contains('h4', 'Lista de cursos').should('be.visible');\ncy.log('✅ Botão \"Listar cursos\" mantém na página correta');",
+                  "err": {},
+                  "uuid": "9c42d44a-1717-4ae9-bf27-effd75f5ca39",
+                  "parentUUID": "d582cde6-175a-47bf-a951-f50e94400ab0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b79b2399-462e-4d0e-8c5e-a49e38604aa0",
+                "3de5d3de-f224-4789-88ed-b2269fe19728",
+                "464a3eb1-3ae5-480d-b1c4-d49f12c088ff",
+                "9c42d44a-1717-4ae9-bf27-effd75f5ca39"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 9222,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "9a23773e-6512-41b1-be83-aa4897f8836b",
+              "title": "📋 CTs de Comportamento da Listagem",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "CT105 - Deve exibir lista vazia quando não há cursos cadastrados",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos 📋 CTs de Comportamento da Listagem CT105 - Deve exibir lista vazia quando não há cursos cadastrados",
+                  "timedOut": null,
+                  "duration": 2412,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.row.q-col-gutter-md').then($lista => {\n  expect($lista.children().length).to.equal(0);\n  cy.log('✅ Lista vazia - comportamento esperado quando não há cursos');\n});",
+                  "err": {},
+                  "uuid": "d4354212-1474-4c60-b3b5-f2daf117a8a5",
+                  "parentUUID": "9a23773e-6512-41b1-be83-aa4897f8836b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "CT106 - Deve exibir cursos na listagem (se houver)",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos 📋 CTs de Comportamento da Listagem CT106 - Deve exibir cursos na listagem (se houver)",
+                  "timedOut": null,
+                  "duration": 2376,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.row.q-col-gutter-md').then($lista => {\n  if ($lista.children().length > 0) {\n    cy.log('✅ Cursos encontrados na listagem');\n  } else {\n    cy.log('⚠️ Lista vazia - nenhum curso para verificar');\n  }\n});",
+                  "err": {},
+                  "uuid": "8faf586e-e6c8-49bb-9085-cbfb0d841aa0",
+                  "parentUUID": "9a23773e-6512-41b1-be83-aa4897f8836b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d4354212-1474-4c60-b3b5-f2daf117a8a5",
+                "8faf586e-e6c8-49bb-9085-cbfb0d841aa0"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 4788,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "4d6c0c26-0415-447b-bbfd-4c1b99a1fb6d",
+              "title": "🔄 CTs de Persistência",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "CT107 - Se houver cursos, eles devem persistir após recarregar",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos 🔄 CTs de Persistência CT107 - Se houver cursos, eles devem persistir após recarregar",
+                  "timedOut": null,
+                  "duration": 3843,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Primeiro, verificar a lista\ncy.get('.row.q-col-gutter-md').should('exist').then($lista => {\n  const quantidadeAntes = $lista.children().length;\n  cy.log(`📊 Cursos encontrados antes: ${quantidadeAntes}`);\n  // Recarregar a página\n  cy.reload();\n  cy.contains('h4', 'Lista de cursos').should('be.visible');\n  // Verificar novamente\n  cy.get('.row.q-col-gutter-md').should('exist').then($listaDepois => {\n    const quantidadeDepois = $listaDepois.children().length;\n    cy.log(`📊 Cursos encontrados depois: ${quantidadeDepois}`);\n    // Se não havia cursos antes, não há o que comparar\n    if (quantidadeAntes === 0) {\n      cy.log('⚠️ Lista vazia - teste de persistência não aplicável');\n      expect(quantidadeDepois).to.equal(0);\n    } else {\n      // Se havia cursos, a quantidade deve ser a mesma\n      expect(quantidadeDepois).to.equal(quantidadeAntes);\n      cy.log('✅ Cursos persistiram após recarregar');\n    }\n  });\n});",
+                  "err": {},
+                  "uuid": "a8a47007-8bc4-4a28-afa4-da6cb55cbe33",
+                  "parentUUID": "4d6c0c26-0415-447b-bbfd-4c1b99a1fb6d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a8a47007-8bc4-4a28-afa4-da6cb55cbe33"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3843,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "82516e56-7f79-46d5-8c96-ada9efab3872",
+              "title": "🔍 CTs de Detalhes dos Cursos",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "CT108/CT109 - Se houver cursos, verificar elementos básicos",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos 🔍 CTs de Detalhes dos Cursos CT108/CT109 - Se houver cursos, verificar elementos básicos",
+                  "timedOut": null,
+                  "duration": 2086,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.row.q-col-gutter-md').then($lista => {\n  if ($lista.children().length > 0) {\n    cy.log('✅ Cursos encontrados - estrutura básica presente');\n  } else {\n    cy.log('⚠️ Lista vazia - não é possível verificar detalhes');\n  }\n});",
+                  "err": {},
+                  "uuid": "7c72969d-0d09-46e7-b9a1-c303e1f4cf98",
+                  "parentUUID": "82516e56-7f79-46d5-8c96-ada9efab3872",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7c72969d-0d09-46e7-b9a1-c303e1f4cf98"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2086,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "55b16944-5b7b-4602-a28f-3fc63b36edac",
+              "title": "🧪 CTs de Exclusão de Cursos",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "CT110 - Botão excluir deve existir (se houver cursos)",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos 🧪 CTs de Exclusão de Cursos CT110 - Botão excluir deve existir (se houver cursos)",
+                  "timedOut": null,
+                  "duration": 2713,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.row.q-col-gutter-md').then($lista => {\n  if ($lista.children().length > 0) {\n    cy.log('✅ Botão excluir deve estar presente (verificar manualmente)');\n  } else {\n    cy.log('⚠️ Lista vazia - botão excluir não aplicável');\n  }\n});",
+                  "err": {},
+                  "uuid": "2690058d-2e0a-4c03-bbe3-9505c95b38c9",
+                  "parentUUID": "55b16944-5b7b-4602-a28f-3fc63b36edac",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2690058d-2e0a-4c03-bbe3-9505c95b38c9"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2713,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "93ffc5e6-9f59-4ec6-8f72-faa4e45a51fb",
+              "title": "⚠️ CTs NEGATIVOS",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "CT111 - Não deve permitir excluir curso sem confirmação (se aplicável)",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos ⚠️ CTs NEGATIVOS CT111 - Não deve permitir excluir curso sem confirmação (se aplicável)",
+                  "timedOut": null,
+                  "duration": 3220,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.log('⚠️ Teste de confirmação de exclusão - implementar conforme necessidade');",
+                  "err": {},
+                  "uuid": "93cde5b3-c47e-4037-a89b-aeee7f4e604a",
+                  "parentUUID": "93ffc5e6-9f59-4ec6-8f72-faa4e45a51fb",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "CT112 - Tentar acessar página inexistente",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos ⚠️ CTs NEGATIVOS CT112 - Tentar acessar página inexistente",
+                  "timedOut": null,
+                  "duration": 4045,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('/pagina-inexistente', {\n  failOnStatusCode: false\n});\ncy.get('body').should('exist');\ncy.log('✅ Página inexistente acessada');",
+                  "err": {},
+                  "uuid": "6f966043-b547-4ed0-86ec-d5ce4b55253a",
+                  "parentUUID": "93ffc5e6-9f59-4ec6-8f72-faa4e45a51fb",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "93cde5b3-c47e-4037-a89b-aeee7f4e604a",
+                "6f966043-b547-4ed0-86ec-d5ce4b55253a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7265,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c778e62f-9604-484e-b19d-2683179f1e94",
+              "title": "📱 CTs de Responsividade",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "CT113 - Deve adaptar layout para mobile (viewport 375px)",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos 📱 CTs de Responsividade CT113 - Deve adaptar layout para mobile (viewport 375px)",
+                  "timedOut": null,
+                  "duration": 3184,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.viewport(375, 667);\ncy.visit('/');\ncy.contains('h4', 'Lista de cursos').should('be.visible');\ncy.contains('a', 'Cadastrar curso').should('be.visible');\ncy.log('✅ Layout adaptado para mobile');",
+                  "err": {},
+                  "uuid": "92a83ef7-b6f1-42c1-81b6-a53df575648d",
+                  "parentUUID": "c778e62f-9604-484e-b19d-2683179f1e94",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "CT114 - Deve adaptar layout para tablet (viewport 768px)",
+                  "fullTitle": "🎯 Testes da Página de Listagem de Cursos 📱 CTs de Responsividade CT114 - Deve adaptar layout para tablet (viewport 768px)",
+                  "timedOut": null,
+                  "duration": 3975,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.viewport(768, 1024);\ncy.visit('/');\ncy.contains('h4', 'Lista de cursos').should('be.visible');\ncy.contains('a', 'Cadastrar curso').should('be.visible');\ncy.log('✅ Layout adaptado para tablet');",
+                  "err": {},
+                  "uuid": "93c16e0e-6c65-4c9e-8494-1b7cb32dbc67",
+                  "parentUUID": "c778e62f-9604-484e-b19d-2683179f1e94",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "92a83ef7-b6f1-42c1-81b6-a53df575648d",
+                "93c16e0e-6c65-4c9e-8494-1b7cb32dbc67"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7159,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "[name]-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "timestamp": "ddmmyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

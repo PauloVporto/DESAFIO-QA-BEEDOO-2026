@@ -8,8 +8,8 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     video: true,
     screenshotOnRunFailure: true,
+
     setupNodeEvents(on, config) {
-      // Configurar para capturar prints mesmo em testes que passam
       on('after:spec', (spec, results) => {
         if (results && results.video) {
           console.log(`Vídeo salvo: ${results.video}`);
@@ -17,18 +17,12 @@ module.exports = defineConfig({
       });
     },
   },
-  // CONFIGURAÇÃO DO REPORTER MOCHAWESOME
-  reporter: 'mochawesome',
+
+  reporter: "mochawesome",
   reporterOptions: {
-    reportDir: 'cypress/reports',           
-    reportFilename: 'relatorio-testes',     
-    overwrite: false,                        
-    html: true,                             
-    json: true,                               
-    charts: true,                             
-    embeddedScreenshots: true,                 
-    inlineAssets: true,                        
-    saveAllAttempts: false,
-    timestamp: 'dd-mm-yyyy_HH-MM-ss'           
+    reportDir: "cypress/reports",
+    overwrite: false,
+    html: false,   // importante
+    json: true
   }
 });
