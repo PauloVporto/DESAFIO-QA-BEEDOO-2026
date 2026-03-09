@@ -104,6 +104,7 @@ Mochawesome — Gerador de relatórios HTML
 Page Object Pattern — Organização e reutilização de código
 
 4.2 Estrutura do Projeto
+
 DESAFIO-QA-BEEDOO-2026
 │
 ├── cypress
@@ -123,6 +124,7 @@ DESAFIO-QA-BEEDOO-2026
 ├── cypress.config.js
 ├── package.json
 └── README.md
+
 ▶️ 4.3 Como Executar os Testes
 Pré-requisitos
 
