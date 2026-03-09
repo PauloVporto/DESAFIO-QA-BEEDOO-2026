@@ -112,7 +112,7 @@ text
 - **Git**
 
 ### 4.2. Instalação
-```bash
+
 # Clone o repositório
 git clone https://github.com/seu-usuario/DESAFIO-QA-BEEDOO-2026.git
 
