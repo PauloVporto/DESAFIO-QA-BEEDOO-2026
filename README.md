@@ -49,7 +49,7 @@ Os cenários e casos de teste estão documentados em uma planilha do Google Shee
 | **Navegação** | 3 | 0 | 3 |
 | **TOTAL** | **15** | **14** | **29** |
 
-🔗 **[Link para a Planilha de Casos de Teste](https://drive.google.com/drive/folders/1PexGLeASUMzO_Uxud4WBZpG1inO_llU2?usp=sharing)**
+🔗 **[Link para a Planilha de Casos de Teste](https://docs.google.com/spreadsheets/d/1aA5CjSigyc3bmf8MiO1GoxObl6-FYtTa/edit?usp=drive_link&ouid=108017183531766004653&rtpof=true&sd=true)**
 
 ---
 
@@ -136,7 +136,7 @@ npm run report:windows
 📸 5. Evidências de Execução
 As evidências (prints e vídeos) estão disponíveis no Google Drive:
 
-🔗 Link para a Pasta de Evidências
+🔗 https://drive.google.com/drive/folders/1PexGLeASUMzO_Uxud4WBZpG1inO_llU2?usp=sharing
 
 Estrutura das Evidências
 📁 prints/ - Screenshots de cada teste
@@ -182,10 +182,10 @@ Taxa de Aprovação	100%
 Bugs Encontrados	2 (baixa prioridade)
 Melhorias Sugeridas	1
 👨‍💻 8. Autor
-Paulo Vicente - QA Analyst
+Paulo - QA Analyst
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paulo-vicente-porto-414201170/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PauloVporto)
+https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 
 📝 9. Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
